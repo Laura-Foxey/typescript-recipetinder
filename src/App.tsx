@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
-import { motion, useAnimation, useMotionValue, useTransform, PanInfo } from "framer-motion";
+import { motion, useAnimation, useMotionValue, MotionValue, useTransform, PanInfo } from "framer-motion";
 
 interface list{
   name: string,
@@ -30,11 +30,12 @@ export default function App() {
   //   jsonValue != null ? JSON.parse(jsonValue) : null
   // }
 
-  const x = useMotionValue(0)
+  const x: MotionValue<number> = useMotionValue(0)
 
   const variants = {
     exitRight: { x: [0, 200, 0], transition: { duration: 0.2 } },
-    exitLeft: {x: [0, -200, 0], transition: { duration: 0.2 }}
+    exitLeft: {x: [0, -200, 0], transition: { duration: 0.2 }},
+    exit: {}
   };
 
   const onClickYes = () => {
@@ -101,7 +102,7 @@ export default function App() {
           <motion.img className='card'
             // Card can be drag only on x-axis
             // variants={variants}
-            // animate={animationToggle}
+            // animate={animationToggle()}
             drag="x"
             x={x}
             dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
