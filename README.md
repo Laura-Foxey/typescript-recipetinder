@@ -1,3 +1,6 @@
+# Purpose
+This project is intended for the practice of Motion Framer with Typescript.  The goal is the creation of a dragable card that triggers a function upon release past a certain point.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

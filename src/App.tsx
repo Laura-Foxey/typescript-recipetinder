@@ -100,11 +100,10 @@ export default function App() {
       <div className='frame'>
         <div>Would you eat this?!</div>
           <motion.img className='card'
-            // Card can be drag only on x-axis
             // variants={variants}
             // animate={animationToggle()}
             drag="x"
-            x={x}
+            //x={x}
             dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
             dragSnapToOrigin={true}
             dragConstraints={{ left: -100, right: 100 }}
